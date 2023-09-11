@@ -1,11 +1,16 @@
-const botao = document.getElementById('botao')
 
+// URL da API
+const apiUrl = `https://viacep.com.br/ws/01001000/json/`;
 
-function pegarCep() {
-    const cep = document.getElementById('cep')
+// Requisição usando fetch
+fetch(apiUrl)
+  .then(response => {
+  
+    return response.json();
+  })
 
-}
-function clicou() {
-    console.log('foi');
-}
-botao.addEventListener("click", clicou());
+  .then(data => {
+    
+    console.log(data.localidade);
+  })
+ 
