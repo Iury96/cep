@@ -33,9 +33,10 @@ function mostrarResultado(data) {
     resultado.innerHTML = "Não foi possível localizar!"
   } else {
     resultado.innerHTML = `
-  <p>Endereço: ${data.logradouro}</p>
-  <p>Endereço: ${data.ddd}</p>
-  
+  <p>Logradouro:<span> ${data.logradouro} </span></p>
+  <p>Bairro:<span> ${data.bairro}</span></p>
+  <p>Estado:<span> ${data.uf} </span></p>
+    
   `
   }
 }
