@@ -14,7 +14,7 @@ body {
     align-items: center;
     background-color: rgb(122, 146, 233);
 }
-.formulario h1, h2 {
+.formulario h1 {
     color: rgb(45, 4, 4);
     margin: 20px 20px;
     text-align: center;
@@ -49,4 +49,8 @@ body {
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 20px;
+}
+.resultado p{
+    font-size: 29px;
+    color: red;
 }
