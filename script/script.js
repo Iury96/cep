@@ -1,5 +1,5 @@
 const botao = document.querySelector('#botao');
-
+const botaoReset = document.querySelector('#botaoReset')
 function fetchCEPData(cep) {
   const apiUrl = `https://viacep.com.br/ws/${cep}/json/`;
 
@@ -9,13 +9,16 @@ function fetchCEPData(cep) {
     });
 }
 
+function atualizar() {
+  window.location.reload();
 
+}
 function consultarEndereco(evento) {
   evento.preventDefault();
   const cep = document.querySelector('#cep').value;
 
   if (cep.length !== 8) {
-    alert('CEP incorreto.');
+    alert('Verifique o CEP fornecido.');
     return;
   }
 
@@ -30,7 +33,7 @@ function consultarEndereco(evento) {
 function mostrarResultado(data) {
   const resultado = document.querySelector('#resultado')
   if (data.erro) {
-    resultado.innerHTML = "Não foi possível localizar!"
+    resultado.innerHTML = "<span>Não foi possível localizar, verifique o CEP fornecido.</span>"
   } else {
     resultado.innerHTML = `
   <p>Logradouro:<span> ${data.logradouro} </span></p>
@@ -42,3 +45,4 @@ function mostrarResultado(data) {
 }
 
 botao.addEventListener('click', consultarEndereco);
+botaoReset.addEventListener('click', atualizar);
