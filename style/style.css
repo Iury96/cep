@@ -4,9 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background-image: url('../img/estrada.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(#808080, #2d0404, #2d0404, #808080)
 }
 .principal {
     margin: 100px auto;
@@ -21,12 +19,13 @@ body {
     color: rgb(45, 4, 4);
     margin: 20px 20px;
     text-align: center;
+    font-size: 40px;
 }
 .principal label {
     margin: 18px;
     color: rgb(45, 4, 4);
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
 }
 .principal input {
     height: 22px;
@@ -40,22 +39,19 @@ body {
     margin: 18px;
 }
 .final {
-    width: 500px;
     text-align: center;
-    background-color: rgb(148, 151, 162);
 }
 
 .final button {
-    background-color: rgb(45, 4, 4);
-    color: rgb(249, 249, 251);
+    color: #2d0404;
     padding: 8px;
     border-radius: 15%;
     border: none;
     cursor: pointer;
     font-weight: bold;
     font-size: 18px;
-    margin: 20px;
-    width: 90px;
+    margin: 40px;
+   
 }
 .final button:hover {
     opacity: 0.8;
@@ -72,4 +68,21 @@ body {
 }
 .resultado span {
     font-weight: bold;
+}
+
+/*RESPONSIVIDADE*/
+@media (max-width: 375px) {
+
+}
+
+@media (max-width: 481px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 1200px) {
+
 }
